@@ -1,0 +1,10 @@
+import Flask, os
+
+app = Flask(__name__)
+app.config['SECRER_KEY'] = os.environ.get('SECRET_KEY')
+
+@app.route('/')
+def home():
+    return 'Happy Flasking!'
+
+app.run(debug=True)

@@ -1,0 +1,8 @@
+from website import db
+
+class Item(db.Model):
+    id = db.Column(db.String(80), primary_key=True)
+    name = db.Column(db.String(80), nullable=False)
+
+    def __repr__(self) -> str:
+        return f'Item --name "{self.name}"'
